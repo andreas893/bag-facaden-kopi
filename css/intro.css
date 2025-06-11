@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+   --primary-color:#2B5278; 
+   --secondary-color:#A52E45;
+   --tetriary-color:#EAD8B1;
+   --primary-font:'Poppins', sans-serif;
+   --secondary-font:'Inter', sans-serif;
+}
+
+body {   
+    background-color: #A52E45;
+    color: #EAD8B1;
+    margin: 0;
+    padding: 0;
+  }
+
+  body h1, h2, h3 {   
+  font-family: var(--secondary-font); 
+  }
+
+  body p {   
+    font-family: var(--primary-font);
+  }
+  
+  main h1 {
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 2.5rem;
+  }
+  /* Main layout */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Section layout */
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    text-align: left;
+    gap: 5rem;
+    font-size: 1.8rem;
+  }
+  
+  /* Figur og billede */
+  figure {
+    margin: 0;
+  }
+  
+  figure img {
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 20px;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.80));
+  }
+  
+  /* Artikel med tekst */
+  article {
+    max-width: 500px;
+  }
+  
+  /* Knap i footer */
+  footer.button-container {
+    margin-top: 2rem;
+  }
+  
+  .button-link {
+    font-family: var(--secondary-font);
+    display: inline-block;
+    background-color: #EAD8B1;
+    color: #A52E45;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 2.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.80));
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .button-link:hover {
+    background-color: #EAD8B1;
+  }

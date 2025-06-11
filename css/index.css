@@ -1,0 +1,557 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body h1, h2, h3{
+    font-family: var(--secondary-font);
+}
+
+body{
+    color: var(--tetriary-color);
+    line-height: 1.6;
+}
+
+body p, a{
+    font-family: var(--primary-font);
+}
+
+body a{
+    text-decoration: none;
+    color: var(--tetriary-color);
+    font-family: var(--secondary-font);
+    font-weight: 600;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+:root{
+   --primary-color:#2B5278; 
+   --secondary-color:#A52E45;
+   --tetriary-color:#EAD8B1;
+   --primary-font:'Poppins', sans-serif;
+   --secondary-font:'Inter', sans-serif;
+}
+
+
+/* Styling af start skærm */
+#start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--primary-color); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+#start-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#start-logo {
+    width: 300px;
+    animation: pulse 2s infinite;
+}
+  
+
+
+#start-screen p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--tetriary-color);
+    font-family: var(--secondary-font);
+    position: absolute;
+    bottom: 30px;
+}
+ 
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+/* Styling af header */
+header{
+    background:var(--primary-color);
+    padding: 3rem;
+}
+/* styling af første header afsnit */
+.heading-et{
+    display: grid;
+    grid-template-columns: 50% auto auto;
+}
+
+.heading-et .item1, .item2{
+    justify-self: self-end;
+}
+
+.heading-et .item1{
+    transform-origin: center;
+    opacity: 0;
+  
+}
+
+.heading-et .item2{
+    transform-origin: center;
+    opacity: 0;
+   
+}
+
+.heading-to .item3{
+    transform-origin: center;
+    opacity: 0;
+    
+}
+
+body.animate-eyes .heading-et .item1 {
+    animation: eye 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+body.animate-eyes .heading-et .item2 {
+    animation: eye 1s ease-out forwards;
+    animation-delay: 2s;
+}
+body.animate-eyes .heading-to .item3 {
+    animation: eye 1s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+
+.heading-et img{
+    width: 70%;
+}
+
+/* animation til øjne i heading et */
+@keyframes eye{
+    0%{
+        transform: scale(0.01); 
+    opacity: 0;
+    }
+
+    30% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      60% {
+        transform: scale(0.95);
+      }
+      80% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+}
+
+
+
+.heading-et h1{
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-to h3{
+font-weight: normal;
+font-size: 2rem;
+padding-right: 1rem;
+}
+
+/* stling af andet header afsnit */
+.heading-to{
+    display: flex;
+    padding-top: 4rem;
+}
+
+
+/* Styling af interaktiv historie */ 
+.historie-sektion{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-image: url(/images/story-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+    padding: 3rem;
+}
+
+.historie-sektion article{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-bottom: 3rem;
+}
+
+.historie-sektion article span{
+    font-style: italic;
+}
+
+.historie-sektion article h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    width: 75%;
+}
+
+.historie-sektion a{
+    background-color: var(--tetriary-color);
+    color: #A52E45; 
+    text-align: center;
+    align-content: center;
+    width: 400px;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.80));
+}
+
+.forlob-knap-tekst{
+    text-decoration: underline 3px;
+}
+
+/* Styling af kort fakta afsnit */
+.fakta-sek{
+    background: linear-gradient(180deg, #A52E45 0%, #B65E6F 50.96%, #A07D90 78.37%, #2B5278 100%);
+    height: 16rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 3rem;
+    justify-items:center;
+}
+
+.fakta-sek aside{
+    width: 80%;
+    height: 50%;
+    justify-content: center;
+}
+
+.fakta-sek aside h3{
+    font-size: 1.5rem;
+}
+
+.txt-to{
+    align-self: flex-end;
+}
+
+/* styling af infografik sektion */
+.infographic-sek{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--primary-color);
+    justify-items: center;
+    gap: 2rem;
+}
+
+.grafik-article{
+    padding-top: 3rem;
+    width: 90%;
+}
+
+.grafik-article h2{
+    padding-bottom: 2rem;
+}
+
+.grafik-article p{
+    padding-bottom: 4rem;
+}
+
+
+
+.infographic-sek img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+/* Styling af sektion med kort */
+.kort-sek{
+    background: var(--secondary-color);
+    padding: 3rem 0rem 3rem 3rem;
+    overflow: hidden;
+}
+
+.kort-head{
+    display: flex;
+    position: relative;
+    background: var(--secondary-color);
+    height: 40vh;
+}
+
+.kort-head h2{
+    width: 70%;
+}
+
+.kort-head img{
+    position: absolute; 
+    top: -100px;
+    height: auto;
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+
+/* Styling af kort og parallax */
+.kort-lax{
+    background: var(--secondary-color);
+    height: 80vh;
+    z-index: 1;
+    position: relative;
+    padding-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.cards{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    transform: translateY(-100px);
+}
+
+/* styling af kort overlay */
+.card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    perspective: 1000px;
+}
+
+.card-popup {
+    background: var(--secondary-color);
+    color: var(--tetriary-color);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 3px solid black;
+    width: 400px;
+    height: 500px;   
+    text-align: center;
+    transform: scale(0.8) rotateY(-90deg); 
+    transform-style: preserve-3d; 
+    animation: popupIn 0.6s forwards;
+}
+
+@keyframes popupIn {
+    to {
+      transform: scale(1) rotateY(0deg);
+    }
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--tetriary-color);
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#card-text p {
+    font-size: 1.3rem; 
+    line-height: 1.5; 
+    margin: 0.5rem 0; 
+    padding: 2rem;
+}
+ 
+.card-title {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+    color: var(--tetriary-color);
+}
+
+.cards img{
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.80));
+}
+
+/* styling af cirkel billede sektion */
+.circle-bg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.circle-bg h3{
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.circle-bg p{
+    width: 80%;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.circle-bg a{
+    background: var(--secondary-color);
+    border-radius: 30px;
+    padding: 2rem;
+    width: 200px;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.80));
+    z-index: 15;
+    pointer-events: auto;
+}
+
+
+.circle-bg a img{
+   padding-right: 0.5rem;
+   width: 24px;
+}
+
+.circle-img{
+    bottom: -130px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -5;
+    
+}
+
+@keyframes pulse{
+    0% {
+        transform: translateY(0);
+    }
+
+    20%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes pulse2{
+    0% {
+        transform: translateY(-20px);
+    }
+
+    20%{
+        transform: translateY(-60px);
+    }
+
+    100%{
+        transform: translateY(-20px);
+
+    }
+}
+
+
+.cards .card1{
+    rotate: -15deg; 
+    animation: pulse 2s ease-in-out infinite;
+    transform-origin: center;
+    animation-delay: 0s;
+}
+
+.cards .card2{  
+    z-index: -3;
+    animation: pulse2 2s ease-in-out infinite;
+    transform-origin: center;
+    animation-delay: 0.3s;
+}
+
+
+.cards .card3{
+    rotate: 15deg;
+    z-index: -4; 
+    animation: pulse 2s ease-in-out infinite;
+    transform-origin: center;
+    animation-delay: 0.5s;
+}
+
+/* styling af back to top */
+.btt{
+
+    color: var(--secondary-color);
+    border: none;
+    padding: 0;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    height: 90px;
+    width: 90px;
+    right: 3rem;
+    bottom: 3.5rem;
+    position: fixed; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btt .material-symbols-outlined{
+    font-size: 2.5rem;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    color: var(--tetriary-color);
+    border-radius: 50%;
+    background: var(--secondary-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: grid;
+    align-content: center;
+    display: block;
+}
+
+/* Animation til knap */
+@keyframes clickPulse {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(0.9);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .btt.clicked {
+    animation: clickPulse 0.4s ease;
+  }

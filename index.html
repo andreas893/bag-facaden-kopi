@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag Facaden</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.typekit.net/xik4fpi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    
+    <section id="start-screen"> 
+        <img src="/images/steno-logo.png" alt="Logo" id="start-logo">
+        <p>Tryk på skærmen for at starte</p>
+    </section>
+
+    <header>
+        <aside class="heading-et">
+            <h1><span>Bag</span> <span>Facaden</span></h1>
+            <img class="item1" src="/images/eyeen.png" alt="Eye">
+            <img class="item2" src="/images/eyeto.png" alt="Eye">
+        </aside>
+        
+        <aside class="heading-to">
+            <h3>Træd ind i sindets verden – en interaktiv fortælling om mod, angst og små sejre</h3>
+            <img class="item3" src="/images/eyetre.png" alt="Eye">
+        </aside>
+    </header>
+
+    <main>
+        <!-- interaktiv historie begynder -->
+        <section class="historie-sektion">
+            <article>
+                <h2>En interaktiv fortælling - <span>Under Huden</span></h2>
+                <p>Prøv vores interaktive fortælling om social angst – en unik oplevelse, hvor du sætter dig ind i hovedet på en person med social angst og selv bestemmer handlingen. Undervejs træffer du valg i skole, kantine og chat, og mærker, hvordan hjertet banker, hænderne ryster eller roen sænker sig, alt efter dine beslutninger.</p>
+            </article>
+            <a href="/forlob/intro.html">Dyk ned i <span class="forlob-knap-tekst">din</span> unikke fortælling</a>
+        </section>
+
+        <section class="fakta-sek">
+            <aside class="txt">
+                <h3>Social angst er mere end blot nervøsitet eller generthed i sociale situationer.</h3>
+            </aside>
+            
+            <aside class="txt-to">
+                <h3>Det er en overvældende frygt, der kan lamme dig og forhindre dig i at leve et fuldt og meningsfuldt liv.</h3>
+            </aside>
+        </section>
+
+        <section class="infographic-sek">
+            <img src="/images/infografik-fikset.png" alt="infografik">
+           
+           
+           
+            <article class="grafik-article">
+                <h2>Hvad er social angst?</h2>
+                <p>
+                    Social angst er en intens frygt eller angst for en eller flere sociale situationer, hvor du kan føle, at andre kigger på dig og vurderer dig. Dette kan omfatte alt fra at tale i offentlige til mere dagligdags interaktioner som at spise på en restaurant.
+                </p>
+                <p>Social angst er ikke blot en følelse af nervøsitet eller ubehag i sociale situationer. Det er en tilstand, der kan lamme din dagligdag og gøre simple ting som at handle ind eller deltage i sociale arrangementer til en udfordring.</p>
+            </article>
+        </section>
+
+        <section class="kort-sek">
+            <aside class="kort-head">
+                <h2>Fra tanker til handling - 
+                    Sådan kan du skabe ro og tryghed</h2>
+                <img src="/images/brain.png" alt="brain">
+            </aside>
+        </section>
+
+        <section class="kort-lax">
+            <aside class="cards">
+                <img class="card1" src="/images/kort.png" alt="kort" data-title="Sidder alene i frokostpausen" data-text="Det kan føles ensomt, men det er også helt okay at have tid for sig selv.|Tip: Brug frokosten til at gøre noget, du kan lide – læs en bog, hør musik eller bare tag en pause.">
+                <img class="card2" src="/images/kort.png" alt="kort" data-title="Undgår øjenkontakt" data-text="Det er helt normalt at føle sig urolig ved at møde andres blik.|Tip: Prøv at kigge kort på øjnene, og så se lidt væk igen. Det kan hjælpe dig med at føle dig mere tryg over tid.">
+                <img class="card3" src="/images/kort.png" alt="kort" data-title="Føler mig usikker i sociale situationer" data-text="Det er helt almindeligt at føle sig nervøs eller usikker i nye eller udfordrende sociale situationer.|
+Tip: Prøv at fokusere på din vejrtrækning – tag dybe, rolige ind- og udåndinger. Det kan hjælpe dig med at falde til ro, som anbefalet af Sundhedsstyrelsen.">
+            </aside>
+
+            <aside class="card-overlay" id="overlay">
+                <aside id="card-text" class="card-popup">
+                  <button class="close-btn" aria-label="Luk kortet">&times;</button>
+                    <h2 id="card-title"></h2>
+                </aside>
+              </aside>
+
+            <aside class="circle-bg">
+                <h3>Træk et oplevelseskort</h3>
+                <p>Få et hurtigt tip eller en lille øvelse, der hjælper dig med at stoppe op, mærke din krop og skabe et øjebliks ro.</p>
+                <a id="forlob-btn" href="/forlob/intro.html">
+                    <img src="/images/pcircle.png" alt="play circle">Under Huden
+                  </a>
+            </aside>
+
+            <img class="circle-img" src="/images/half-circle.png" alt="halv-cirkel">
+            <button class="btt" onclick="topFunction()" id="myBtn" title="Go to top">
+                <span id="progress-value" class="material-symbols-outlined">
+                    arrow_upward
+                    </span>
+            </button>
+        </section>
+    </main>
+
+<script src="js/parallax.js"></script>
+<script src="/js/back-to-top.js"></script>
+<script src="/js/kort.js"></script>
+<script src="/js/start-screen.js"></script>
+</body>
+</html>

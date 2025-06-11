@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under huden</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.typekit.net/xik4fpi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/forlob.css">
+</head>
+<body>
+    <main class="container">
+        <a href="../index.html" id="forside-knap" onclick="genstartHistorien()">Forside</a>
+             <!-- Mute-knap -->
+             <div id="mute-button" class="mute-button">
+                <img id="mute-icon" src="../images/unmute-ikon.png" alt="Mute Toggle">
+            </div>
+    
+        <h1>Beskeden</h1>
+
+        <section class="scene">
+            <p>
+                <strong>Scene:</strong><br>
+                Du får en besked: “Skal vi lave dansk sammen på fredag? :)” Det er en fra gruppearbejdet. Du stirrer længe på den.
+            </p>
+        </section>
+
+        <section class="video-placeholder">
+            <video controls src="/videoer/beskeden.mp4"></video>
+          </section>
+
+
+        <section class="buttons">
+            <a class="button" onclick="tildelBadge('dagenkomoggik')" href="../afslutning.html" >
+                Du svarer: “Ja, det vil jeg gerne.”
+            </a>
+            <a class="button" onclick="tildelBadge('dagenkomoggik')" href="../afslutning.html" >
+                Du ignorerer beskeden og lægger mobilen.
+            </a>
+        </section>
+
+        <!-- Øjne -->
+        <img src="../images/eyeen.png" class="eye top-left" alt="Øje">
+        <img src="../images/eyeto.png" class="eye top-right" alt="Øje">
+        <img src="../images/eyeto.png" class="eye bottom-left" alt="Øje">
+        <img src="../images/eyetre.png" class="eye bottom-right" alt="Øje">
+        <img src="../images/eyetre.png" class="eye left" alt="Øje">
+        <img src="../images/eyeen.png" class="eye right" alt="Øje">
+        <img src="../images/wavebg.png" class="wavebg" alt="bølge i baggrunden">
+    </main>
+
+    <script src="../js/afslutning-fold-ud.js"></script>
+    <script src="../js/mute.js"></script>
+</body>
+</html>

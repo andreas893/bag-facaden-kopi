@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Under huden</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.typekit.net/xik4fpi.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/afslutning.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Din rejse - Valg, sejre og indsigt</h1>
+    <p class="intro-text">
+      Tak for din indsats! Her kan du se, hvordan dine valg har formet din dag, hvilke små sejre du har samlet.
+    </p>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Refleksion</h2>
+        <img src="images/reflection.png" alt="Refleksion ikon" />
+        <button class="fold-ud">Tryk her</button>
+      </article>
+
+      <article class="card">
+        <h2>Præsentationer</h2>
+        <img src="images/checklist.png" alt="Tjekliste ikon" />
+        <button class="fold-ud">Tryk her</button>
+      </article>
+
+      <article class="card">
+        <h2>Dine badges</h2>
+        <img src="images/trophy.png" alt="Pokalf ikon" />
+        <button class="fold-ud">Tryk her</button>
+      </article>
+    </section>
+
+    <section class="bottom-buttons">
+      <a href="forlob/intro.html" class="main-button" onclick="genstartHistorien()">Genstart Historien</a>
+      <a href="index.html" class="main-button" onclick="genstartHistorien()">Hjem</a>
+    </section>
+
+    <img src="images/wavebg.png" alt="baggrundsbølge" class="bg-wave" />
+    <img src="images/wavebg.png" alt="baggrundsbølge" class="bg-wave-bottom" />
+  </main>
+
+  <!-- Modal (pop-up) -->
+  <div id="popup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="popup-text"></div>
+    </div>
+  </div>
+
+  <script src="js/afslutning-fold-ud.js"></script>
+</body>
+</html>
