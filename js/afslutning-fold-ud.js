@@ -43,16 +43,17 @@ const closeBtn = document.querySelector(".close-btn");
 const foldUdButtons = document.querySelectorAll(".fold-ud");
 
 // Luk popup
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show");
-});
-
-// Luk popup ved klik udenfor indholdet
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
+if (closeBtn && modal) {
+  closeBtn.addEventListener("click", () => {
     modal.classList.remove("show");
-  }
-});
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.remove("show");
+    }
+  });
+}
 
 // Fold-ud knapper
 foldUdButtons.forEach((btn, index) => {

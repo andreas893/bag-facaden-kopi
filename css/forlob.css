@@ -80,19 +80,19 @@ h1 {
 .button {
     background-color: var(--tetriary-color);
     color: var(--secondary-color);
-    padding: 15px 20px;
+    padding: 20px 20px;
     border-radius: 15px;
     text-decoration: none;
     font-weight: bold;
     box-shadow: 5px 5px 0 #000;
-    width: 20rem;
-    height: 3rem;
+    width: 18rem;
+    height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: pop 2s ease-in;
+    /* animation: pop 2s ease-in;
     animation-delay: 8s;
-    animation-fill-mode: both;
+    animation-fill-mode: both; */
 }
 
 
@@ -167,9 +167,101 @@ h1 {
     width: 40px;
     height: 40px;
     cursor: pointer;
-  }
+}
   
   .mute-button img {
     width: 100%;
     height: auto;
-  }
+}
+
+
+
+.show {
+  display: block;
+}
+
+.refleksion-toggle {
+    position: fixed;
+    bottom: 38px;
+    right: 15px;
+    height: 5rem;
+    font-size: 1rem;
+    background: var(--tetriary-color);
+    color: var(--secondary-color);
+    padding: 1rem 1.5rem;
+    box-shadow: 5px 5px 0 #000;
+    border: none;
+    border-radius: 15px;
+    font-family: var(--primary-font);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+#refleksion-section {
+    display: none;
+    height: 60vh;
+    width: 60vw;
+    position: absolute;
+    right: -15px;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--tetriary-color);
+    z-index: 998;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#refleksion-section.show {
+   display: flex;
+}
+
+#refleksion-section h3{
+    color: var(--secondary-color);
+}
+
+#refleksion-section textarea {
+  width: 80%;
+  height: 60%;
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: inherit;
+  margin-bottom: 2rem;
+}
+
+#refleksion-section .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 40px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#refleksion-section button {
+  padding: 10px;
+  font-weight: bold;
+  font-family: var(--primary-font);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 15px;
+  color: var(--tetriary-color);
+  width: 20%;
+  font-size: 1rem;
+  z-index: 999;
+}
+
+#refleksion-section p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
