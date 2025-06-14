@@ -36,7 +36,19 @@
             <a class="button" onclick="tildelBadge('dulyttedetildigselv')" href="../forlob/hvad-lavede-du-i-weekenden.html" >
                 Du undværer madpakken og går ud på toilettet og sidder i fred.
             </a>
+            <button class="refleksion-toggle">Hvad ville du have gjort?</button>
         </section>
+
+        
+        <aside id="overlay"></aside>
+        <aside id="refleksion-section">
+            <button class="close-btn">×</button>
+            <h3>Her har du muligheden for at dele dit eget svar med os</h3>
+            <textarea id="customInput" placeholder="Skriv dit eget forslag..."></textarea>
+          <button id="sendBtn" >Send</button>
+          <p id="responseMessage"></p>
+        </aside>
+            
 
         <!-- Øjne -->
         <img src="../images/eyeen.png" class="eye top-left" alt="Øje">
@@ -50,5 +62,6 @@
 
     <script src="../js/afslutning-fold-ud.js"></script>
     <script src="../js/mute.js"></script>
+    <script src="../js/refleksion.js"></script>
 </body>
 </html>

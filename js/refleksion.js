@@ -2,16 +2,25 @@
 
 function toggleReflection() {
     const section = document.getElementById('refleksion-section');
+    const overlay = document.getElementById('overlay')
     section.classList.toggle('show');
+    if (section.classList.contains('show')) {
+        overlay.style.display = 'block';
+    } else {
+        overlay.style.display = 'none';
+    }
 }
 
 function closeReflection() {
     const section = document.getElementById('refleksion-section');
+    const overlay = document.getElementById('overlay')
     section.classList.remove('show');
+    overlay.style.display = 'none';
 }
 
 function reflektInput() {
-    const input = document.getElementById('customInput').value.trim();
+    const inputField = document.getElementById('customInput');
+    const input = inputField.value.trim();
     const response = document.getElementById('responseMessage');
 
     if (input) {
@@ -19,6 +28,7 @@ function reflektInput() {
     } else {
         response.textContent = "";
     }
+    inputField.value = "";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -38,3 +48,4 @@ document.addEventListener("DOMContentLoaded", function() {
         sendBtn.addEventListener("click", reflektInput);
     }
 });
+
