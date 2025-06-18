@@ -4,7 +4,7 @@ document.querySelectorAll('.cards img').forEach(card => {
     const overlay = document.getElementById('overlay');
     const textContainer = document.getElementById('card-text');
     const titleContainer = document.getElementById('card-title');
-    const popupCard = document.querySelector('popup-card');
+    const popupCard = document.querySelector('.card-popup');
     const textLines = card.getAttribute('data-text').split('|');
     const titleText = card.getAttribute('data-title');
 

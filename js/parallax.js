@@ -20,4 +20,7 @@ window.addEventListener("scroll", () => {
    const scaleValue = Math.min(1, 0.5 + value * 0.002);
    brainImg.style.transform = `scale(${scaleValue})`;
    brainImg.style.opacity = scaleValue;
+   console.log(value, scaleValue);
+
  });
+ 
